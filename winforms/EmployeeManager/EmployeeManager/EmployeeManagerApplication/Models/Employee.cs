@@ -1,4 +1,6 @@
-﻿namespace EmployeeManagerApplication.Models
+﻿using System;
+
+namespace EmployeeManagerApplication.Models
 {
    public class Employee
     {
@@ -7,5 +9,9 @@
         public string LastName { get; set; }
 
         public string Address { get; set; }
+
+        public string Gender { get; set; }
+
+        public int Age { get; set; }
     }
 }

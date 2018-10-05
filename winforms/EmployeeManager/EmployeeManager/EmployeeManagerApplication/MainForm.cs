@@ -16,7 +16,7 @@ namespace EmployeeManagerApplication
         public MainForm()
         {
             InitializeComponent();
-            grdEmployee.auto  
+            grdEmployee.AutoGenerateColumns = false;
         }
 
         private void OnButtonLoadClick(object sender, EventArgs e)
@@ -27,5 +27,9 @@ namespace EmployeeManagerApplication
             grdEmployee.DataSource = employees;
         }
 
+        private void OnButtonAddClicked(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"You clicked button add");
+        }
     }
 }

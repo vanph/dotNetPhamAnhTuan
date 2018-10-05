@@ -9,7 +9,7 @@ namespace EmployeeManagerApplication.Business
         {
             var employees = new List<Employee>
             {
-                new Employee() {FirstName = "Van", LastName = "Pham", Address = "Thai Nguyen"},
+                new Employee() {FirstName = "Van", LastName = "Pham", Address = "Thai Nguyen", Age = 30, Gender = "Men"},
                 new Employee() {FirstName = "Tuan Anh", LastName = "Pham", Address = "Nam Dinh"},
                 new Employee() {FirstName = "Hieu", LastName = "Nguyen", Address = "Thai Nguyen"},
                 new Employee() {FirstName = "Duc Anh", LastName = "Hoang", Address = "Ninh Binh"},

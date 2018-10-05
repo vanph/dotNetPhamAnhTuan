@@ -1,0 +1,7 @@
+﻿1. EmployeeRepository > GetEmployees:
+- Assign Age, Gender for Employees
+2. Add two more columns Age (width: 80), Gender (width:100) into DataGridView
+3. Add 3 buttons and implement clicked event for each button:
+- Add
+- Edit
+- Delete
