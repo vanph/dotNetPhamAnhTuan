@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassAndObject
+namespace Types
 {
    public class Employee
     {
@@ -12,12 +12,8 @@ namespace ClassAndObject
 
         public string LastName { get; set; }
 
-        public string Address { get; set; }
+        public int Ages { get; set; }
 
-       
-        public void Work()
-        {
-            Console.WriteLine($"{FirstName} {LastName} is working");
-        }
+        public string Note { get; set; }
     }
 }

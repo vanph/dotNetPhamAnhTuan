@@ -50,11 +50,13 @@
             this.grdEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdEmployee.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grdEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEmployee.Location = new System.Drawing.Point(47, 89);
             this.grdEmployee.Name = "grdEmployee";
             this.grdEmployee.Size = new System.Drawing.Size(710, 319);
             this.grdEmployee.TabIndex = 1;
+            this.grdEmployee.BorderStyleChanged += new System.EventHandler(this.OnButtonLoadClick);
             // 
             // label1
             // 

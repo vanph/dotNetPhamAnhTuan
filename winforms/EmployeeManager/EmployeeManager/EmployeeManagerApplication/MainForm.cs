@@ -16,6 +16,7 @@ namespace EmployeeManagerApplication
         public MainForm()
         {
             InitializeComponent();
+            grdEmployee.auto  
         }
 
         private void OnButtonLoadClick(object sender, EventArgs e)
@@ -25,5 +26,6 @@ namespace EmployeeManagerApplication
 
             grdEmployee.DataSource = employees;
         }
+
     }
 }

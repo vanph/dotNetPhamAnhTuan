@@ -1,0 +1,10 @@
++ bool IsPrimeNumber(int givenNumber)
+{
+	If givenNumber <= 1 => False
+	Else 
+	  For i = 2 ; i< givenNumber ; i++
+		If givenNumber % i == 0 => False
+	  
+    True
+	
+}

@@ -14,7 +14,11 @@ namespace EmployeeManagerApplication.Business
                 new Employee() {FirstName = "Hieu", LastName = "Nguyen", Address = "Thai Nguyen"},
                 new Employee() {FirstName = "Duc Anh", LastName = "Hoang", Address = "Ninh Binh"},
                 new Employee() {FirstName = "Son", LastName = "Nguyen", Address = "Thai Nguyen"},
-                new Employee() {FirstName = "Le", LastName = "Phan", Address = "Nam Dinh"}
+                new Employee() {FirstName = "Le", LastName = "Phan", Address = "Nam Dinh"},
+                new Employee() {FirstName = "Hoang", LastName = "Nguyen", Address = "Thai Nguyen"},
+                new Employee() {FirstName = "Dieu Anh", LastName = "Nguyen", Address = "Ninh Binh"},
+                new Employee() {FirstName = "Kien", LastName = "Dinh", Address = "Thai Nguyen"},
+                new Employee() {FirstName = "Linh", LastName = "Hoang", Address = "Nam Dinh"}
             };
             
             return employees;
