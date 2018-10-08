@@ -46,15 +46,23 @@ namespace EmployeeManagerApplication
 
         private void OnButtonExportClicked(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ExportEmployees()
+        {
             var employees = _employeeRepository.GetEmployees();
             var exportEmployeeString = "";
 
+            var order = 0;
             foreach (var emp in employees)
             {
+                order = order + 1;
+
                 exportEmployeeString += $"{emp.FirstName} {emp.LastName} {Environment.NewLine}";
             }
 
-            File.WriteAllText(@"D:\trainning\temp\employee.txt", exportEmployeeString);
+            File.WriteAllText(@"E:\dotNet\temp\employee.txt", exportEmployeeString);
             //File.WriteAllText("D:\\trainning\\temp\\employee.txt", exportEmployeeString);
         }
     }
