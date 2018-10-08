@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using EmployeeManagerApplication.Business;
 
@@ -52,7 +46,16 @@ namespace EmployeeManagerApplication
 
         private void OnButtonExportClicked(object sender, EventArgs e)
         {
-            MessageBox.Show(@"You clicked button Export", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            var employees = _employeeRepository.GetEmployees();
+            var exportEmployeeString = "";
+
+            foreach (var emp in employees)
+            {
+                exportEmployeeString += $"{emp.FirstName} {emp.LastName} {Environment.NewLine}";
+            }
+
+            File.WriteAllText(@"D:\trainning\temp\employee.txt", exportEmployeeString);
+            //File.WriteAllText("D:\\trainning\\temp\\employee.txt", exportEmployeeString);
         }
     }
 }
