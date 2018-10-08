@@ -8,3 +8,7 @@
 4. Export
 === Employee List ===
 1. FullName: Van Pham - Address: TN - Age: 30 - Gender: Male
+
+5. Open file dialog to export
+
+6. Check directory existing or not
