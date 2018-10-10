@@ -49,12 +49,20 @@ namespace EmployeeManagerApplication
 
         private void OnButtonExportClicked(object sender, EventArgs e)
         {
-            var employees = _employeeRepository.GetEmployees();
-            ExportEmployees(employees);
-            MessageBox.Show(@"Successfully exported", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            saveFileExportDialog.Title = "Save export employee file";
+            saveFileExportDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileExportDialog.FilterIndex = 1;
+            if (saveFileExportDialog.ShowDialog() == DialogResult.OK)
+            {
+                var employees = _employeeRepository.GetEmployees();
+                ExportEmployees(employees, saveFileExportDialog.FileName);
+                MessageBox.Show(@"Successfully exported", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+
         }
 
-        private void ExportEmployees(List<Employee> employees)
+        private void ExportEmployees(List<Employee> employees, string fileName)
         {
             var employeeStringBuilder = new StringBuilder();
 
@@ -63,7 +71,7 @@ namespace EmployeeManagerApplication
                 employeeStringBuilder.Append($"{emp.FirstName} {emp.LastName} {Environment.NewLine}");
             }
 
-            File.WriteAllText(@"D:\trainning\temp\employee.txt", employeeStringBuilder.ToString());
+            File.WriteAllText(fileName, employeeStringBuilder.ToString());
         }
 
         private void ExportEmployeesBadVersion(List<Employee> employees)
