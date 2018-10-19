@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using EmployeeManagerApplication.Business;
-using EmployeeManagerApplication.Models;
+using EmployeeBusiness.Business;
+using EmployeeBusiness.Models;
 
 namespace EmployeeManagerApplication
 {
     public partial class MainForm : Form
     {
         private EmployeeRepository _employeeRepository;
+        private EmployeeExporter _employeeExporter;
+
         public MainForm()
         {
             InitializeComponent();
             grdEmployee.AutoGenerateColumns = false;
             _employeeRepository = new EmployeeRepository();
+            _employeeExporter = new EmployeeExporter();
         }
 
         private void OnButtonLoadClick(object sender, EventArgs e)
@@ -27,7 +30,8 @@ namespace EmployeeManagerApplication
 
         private void OnButtonAddClicked(object sender, EventArgs e)
         {
-            MessageBox.Show(@"You clicked button add");
+            var frm = new EmployeeDetailForm();
+            frm.ShowDialog();
         }
 
         private void OnButtonEditClicked(object sender, EventArgs e)
@@ -47,21 +51,6 @@ namespace EmployeeManagerApplication
             grdEmployee.DataSource = employees;
         }
 
-      
-        private void ExportEmployeeInformations(List<Employee> employees, string fileName)
-        {            
-            var employeeStringBuilder = new StringBuilder();
-            var index = 0;
-            foreach (var emp in employees)
-            {
-                index++;
-                employeeStringBuilder.Append($"{index}. FullName: {emp.FirstName} {emp.LastName} - Address: {emp.Address} - Age: {emp.Age} - Gender: {emp.Gender} {Environment.NewLine}");
-            }
-
-            File.WriteAllText(fileName, employeeStringBuilder.ToString());
-
-        }
-
         private void OnExportMenuItemClicked(object sender, EventArgs e)
         {
             saveFileExportDialog.Title = "Save Employee File";
@@ -70,10 +59,9 @@ namespace EmployeeManagerApplication
             if (saveFileExportDialog.ShowDialog() == DialogResult.OK)
             {
                 var employees = _employeeRepository.GetEmployees();
-                ExportEmployeeInformations(employees, saveFileExportDialog.FileName);
+                _employeeExporter.Export(employees, saveFileExportDialog.FileName);
                 MessageBox.Show(@"Successfully exported", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void OnExportCsvMenuItemClicked(object sender, EventArgs e)
@@ -84,23 +72,13 @@ namespace EmployeeManagerApplication
             if (saveFileExportDialog.ShowDialog() == DialogResult.OK)
             {
                 var employees = _employeeRepository.GetEmployees();
-                ExportCsvEmployeeInformations(employees, saveFileExportDialog.FileName);
+                _employeeExporter.ExportCsv(employees, saveFileExportDialog.FileName, "|");
+
                 MessageBox.Show(@"Successfully exported", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void ExportCsvEmployeeInformations(List<Employee> employees, string fileName)
-        {
-            var employeeStringBuilder = new StringBuilder();
-            var separatorCharacter = "|";
-            foreach (var emp in employees)
-            {
-                employeeStringBuilder.Append($"{emp.FirstName}{separatorCharacter}{emp.LastName}{Environment.NewLine}");
-            }
-
-            File.WriteAllText(fileName, employeeStringBuilder.ToString());
-        }
-
+        
         //private void ExportEmployeesBadVersion(List<Employee> employees)
         //{
         //    var employeeString = "";

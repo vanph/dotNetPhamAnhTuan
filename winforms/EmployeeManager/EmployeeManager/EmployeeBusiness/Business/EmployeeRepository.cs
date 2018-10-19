@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using EmployeeManagerApplication.Models;
+using EmployeeBusiness.Models;
 
-namespace EmployeeManagerApplication.Business
+namespace EmployeeBusiness.Business
 {
     public class EmployeeRepository
     {

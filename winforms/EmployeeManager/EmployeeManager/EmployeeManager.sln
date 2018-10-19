@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagerApplication", "EmployeeManagerApplication\EmployeeManagerApplication.csproj", "{CA5B7951-027A-456D-9665-85311709B959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBusiness", "EmployeeBusiness\EmployeeBusiness.csproj", "{3CF2A450-B045-44FE-837A-F725392A0DDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CA5B7951-027A-456D-9665-85311709B959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA5B7951-027A-456D-9665-85311709B959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA5B7951-027A-456D-9665-85311709B959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF2A450-B045-44FE-837A-F725392A0DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF2A450-B045-44FE-837A-F725392A0DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF2A450-B045-44FE-837A-F725392A0DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF2A450-B045-44FE-837A-F725392A0DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
