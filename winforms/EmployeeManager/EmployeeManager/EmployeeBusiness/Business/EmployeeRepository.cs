@@ -18,7 +18,10 @@ namespace EmployeeBusiness.Business
                 new Employee() {FirstName = "Hoang", LastName = "Nguyen", Address = "Thai Nguyen", Age = 36, Gender = "Men"},
                 new Employee() {FirstName = "Dieu Anh", LastName = "Nguyen", Address = "Ninh Binh", Age = 37, Gender = "Women"},
                 new Employee() {FirstName = "Kien", LastName = "Dinh", Address = "Thai Nguyen", Age = 38, Gender = "Men"},
-                new Employee() {FirstName = "Linh", LastName = "Hoang", Address = "Nam Dinh", Age = 39, Gender = "Women"}
+                new Employee() {FirstName = "Linh", LastName = "Hoang", Address = "Nam Dinh", Age = 39, Gender = "Women"},
+                new Employee() {FirstName = "Dieu Anh 2", LastName = "Nguyen", Address = "Ninh Binh", Age = 37, Gender = "Women"},
+                new Employee() {FirstName = "Kien 2", LastName = "Dinh", Address = "Thai Nguyen", Age = 38, Gender = "Men"},
+                new Employee() {FirstName = "Linh 2", LastName = "Hoang", Address = "Nam Dinh", Age = 39, Gender = "Women"}
             };
             
             return employees;
