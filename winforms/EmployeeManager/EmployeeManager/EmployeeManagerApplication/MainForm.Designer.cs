@@ -46,9 +46,6 @@
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportcsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGetEmployee = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.lblUserName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmployee)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -199,42 +196,11 @@
             this.btnGetEmployee.UseVisualStyleBackColor = true;
             this.btnGetEmployee.Click += new System.EventHandler(this.OnButtonLoadClick);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(599, 27);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 9;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.OnButtonLoginClicked);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(682, 27);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 10;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(524, 33);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(57, 13);
-            this.lblUserName.TabIndex = 11;
-            this.lblUserName.Text = "UserName";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnGetEmployee);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -273,9 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportcsvToolStripMenuItem;
         private System.Windows.Forms.Button btnGetEmployee;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label lblUserName;
     }
 }
 

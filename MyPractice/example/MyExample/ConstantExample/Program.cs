@@ -22,7 +22,27 @@ namespace ConstantExample
             Common.Message = "abc";
 
             Console.WriteLine(Common.Message);
+
+            Console.WriteLine(".Net....");
+            Console.WriteLine(long.MaxValue);
+            var var1 = "van";
+            var var2 = "vAn";
+
+            if (var1.Equals(var2, StringComparison.InvariantCultureIgnoreCase))
+            {
+                Console.WriteLine("They are equal");
+            }
+            else
+            {
+                Console.WriteLine("They are not equal");
+            }
+
+            var hl = new HelloClass();
+            hl.SayHello("van");
+
             Console.ReadLine();
         }
+
+        
     }
 }

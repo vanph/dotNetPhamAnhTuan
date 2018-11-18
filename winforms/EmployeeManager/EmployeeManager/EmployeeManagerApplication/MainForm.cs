@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using EmployeeBusiness.Business;
-using EmployeeBusiness.Models;
 
 namespace EmployeeManagerApplication
 {
@@ -20,9 +16,7 @@ namespace EmployeeManagerApplication
             grdEmployee.AutoGenerateColumns = false;
             _employeeRepository = new EmployeeRepository();
             _employeeExporter = new EmployeeExporter();
-            grdEmployee.Visible = false;
-            lblUserName.Text = string.Empty;
-        }
+         }
 
         private void OnButtonLoadClick(object sender, EventArgs e)
         {
@@ -50,7 +44,7 @@ namespace EmployeeManagerApplication
 
         private void OnMainFormLoaded(object sender, EventArgs e)
         {
-            SetControlsStatus();
+            LoadEmployees();
         }
 
         private void LoadEmployees()
@@ -87,29 +81,7 @@ namespace EmployeeManagerApplication
             }
         }
 
-        private void OnButtonLoginClicked(object sender, EventArgs e)
-        {
-            var userManager = new UserManager();
-            var result = userManager.Login();
-            if (result)
-            {
-                lblUserName.Text = UserContext.UserName;
-                SetControlsStatus();
-                LoadEmployees();
-            }
-           
-        }
-
-        private void SetControlsStatus()
-        {
-            grdEmployee.Visible = UserContext.IsLoggedIn;
-            btnLogout.Visible = UserContext.IsLoggedIn;
-            btnAdd.Visible = UserContext.IsLoggedIn;
-            btnEdit.Visible = UserContext.IsLoggedIn;
-            btnDelete.Visible = UserContext.IsLoggedIn;
-            btnLogin.Visible = !UserContext.IsLoggedIn;
-        }
-
+       
        
         //private void ExportEmployeesBadVersion(List<Employee> employees)
         //{
