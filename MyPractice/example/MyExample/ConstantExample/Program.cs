@@ -18,6 +18,8 @@ namespace ConstantExample
             Console.WriteLine(Common.UsaMoneySymbol);
             Console.WriteLine(Common.VnMoneySymbol);
 
+            Console.WriteLine();
+
             Console.WriteLine(Common.Message);
             Common.Message = "abc";
 
@@ -36,10 +38,8 @@ namespace ConstantExample
             {
                 Console.WriteLine("They are not equal");
             }
-
-            var hl = new HelloClass();
-            hl.SayHello("van");
-
+            
+            
             Console.ReadLine();
         }
 

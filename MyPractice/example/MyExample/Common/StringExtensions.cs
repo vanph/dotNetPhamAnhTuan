@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ExtensionMethodExample
+namespace Common
 {
-    public  static  class StringExtensions
+    public static class StringExtensions
     {
         public static void SayHello(this string source)
         {
