@@ -8,7 +8,7 @@ namespace NamedAndOptional
     internal class Program
     {
         // A method with nameed and optional parameters
-        public static void Search(string name, int age = 21, string city = "Ha noi")
+        public static void Search(string name, int age = 20, string city = "HN")
         {
             Console.WriteLine("Name = {0} - Age = {1} - City = {2}", name, age, city);
         }
@@ -16,18 +16,20 @@ namespace NamedAndOptional
         static void Main(string[] args)
         {
             // Standard call
+            Search(name:"Sue", age:22, city:"New York");
+
+            // Standard call
             Search("Sue", 22, "New York");
 
-            // Omit city parameter
-            Search("Mark", 23);
+            Search("Sue", 22);
+
+            Search("Van");
 
             // Explicitly name the city parameter
-            Search("Lucy", city: "Cairo");
+            Search("Anh Tuan", city:"Sai Gon");
 
-            // Use named parameters in reverse order
-            Search("Pedro", age: 45, city: "Saigon");
-
-            Search("Minh");
+            // Explicitly name the age parameter
+            Search("Anh Tuan", age: 40);
 
             Console.ReadLine();
         }
