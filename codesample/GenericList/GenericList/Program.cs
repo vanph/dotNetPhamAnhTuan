@@ -23,6 +23,8 @@ namespace GenericList
             {
                 Console.WriteLine(i);
             }
+
+            Console.ReadLine();
         }
     }
 }

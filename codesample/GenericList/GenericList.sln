@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericList", "GenericList\GenericList.csproj", "{9FD1FC61-7835-4325-99F6-1E8301147688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExample", "GenericExample\GenericExample.csproj", "{1C8F3976-6D43-4761-8EFA-CCF37ED52FB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 		{9FD1FC61-7835-4325-99F6-1E8301147688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FD1FC61-7835-4325-99F6-1E8301147688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FD1FC61-7835-4325-99F6-1E8301147688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8F3976-6D43-4761-8EFA-CCF37ED52FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8F3976-6D43-4761-8EFA-CCF37ED52FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8F3976-6D43-4761-8EFA-CCF37ED52FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8F3976-6D43-4761-8EFA-CCF37ED52FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E27F680-9791-4C50-914D-80EB615AD608}
 	EndGlobalSection
 EndGlobal
