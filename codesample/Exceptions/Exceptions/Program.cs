@@ -18,6 +18,7 @@ namespace Exceptions
         public void Method2()
         {
             Console.WriteLine("Method 2 begins");
+
             try
             {
                 Method3();
@@ -34,8 +35,10 @@ namespace Exceptions
         public void Method3()
         {
             Console.WriteLine("Method 3 begins");
-                var x = 0;
-                var y = 12 / x;
+
+            var x = 0;
+            var y = 12 / x;
+
             Console.WriteLine("Method 3 ends");
         }
 
@@ -46,6 +49,8 @@ namespace Exceptions
         {
             Tester t = new Tester();
             t.Method1();
+
+            Console.ReadLine();
         }
     }
 }

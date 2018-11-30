@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{E7C5C470-D5DD-4E24-8BEC-DE9F2BF21B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputException", "InputException\InputException.csproj", "{38B985A8-FE2E-442C-BC8E-CA469F0CE97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideZeroConsoleApp", "DivideZeroConsoleApp\DivideZeroConsoleApp.csproj", "{B2D10DAA-8AC8-4670-B634-0E3B7EFBD096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +19,19 @@ Global
 		{E7C5C470-D5DD-4E24-8BEC-DE9F2BF21B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C5C470-D5DD-4E24-8BEC-DE9F2BF21B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C5C470-D5DD-4E24-8BEC-DE9F2BF21B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B985A8-FE2E-442C-BC8E-CA469F0CE97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B985A8-FE2E-442C-BC8E-CA469F0CE97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B985A8-FE2E-442C-BC8E-CA469F0CE97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B985A8-FE2E-442C-BC8E-CA469F0CE97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D10DAA-8AC8-4670-B634-0E3B7EFBD096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D10DAA-8AC8-4670-B634-0E3B7EFBD096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D10DAA-8AC8-4670-B634-0E3B7EFBD096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D10DAA-8AC8-4670-B634-0E3B7EFBD096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3FB3ACE-7AA6-4FD7-B7DF-F463DA2AAFCE}
 	EndGlobalSection
 EndGlobal
