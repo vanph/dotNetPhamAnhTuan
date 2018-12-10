@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace DelegateDemo
 {
-    class MediaTester
+   public class MediaTester
     {
-        public delegate int TestMedia();
-
-        public void RunTest(TestMedia testDelegate)
+        public void RunTest(MediaFunction function)
         {
-            int result = testDelegate();
+            int result = function();
+
             if (result == 0)
             {
                 Console.WriteLine("Works!");

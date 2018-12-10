@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate.cs" />
     <Compile Include="MediaTester.cs" />
     <Compile Include="MP3Player.cs" />
     <Compile Include="MP4Player.cs" />

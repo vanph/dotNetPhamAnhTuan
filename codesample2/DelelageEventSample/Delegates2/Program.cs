@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Delegates2.CustomDelegate;
 
 namespace Delegates2
@@ -21,9 +22,9 @@ namespace Delegates2
 
             // Create the delegate object a that references 
             // the method Hello:
-            a = new MyDelegate(Hello);
+            //a = new MyDelegate(Hello);
             //Or:
-            //a = Hello; 
+            a = Hello; 
 
             // Create the delegate object b that references 
             // the method Goodbye:
@@ -35,20 +36,56 @@ namespace Delegates2
             // which calls both methods in order:
             var c = a + b;
 
-            // Remove a from the composed delegate, leaving d, 
-            // which calls only the method Goodbye:
+            //// Remove a from the composed delegate, leaving d, 
+            //// which calls only the method Goodbye:
             var d = c - a;
 
-            Console.WriteLine("Invoking delegate a:");
-            a("A");
-            Console.WriteLine("Invoking delegate b:");
-            b("B");
-            Console.WriteLine("Invoking delegate c:");
-            c("C");
-            Console.WriteLine("Invoking delegate d:");
-            d("D");
+            //Console.WriteLine("Invoking delegate a:");
+            //a("Van");
+            //Console.WriteLine("Invoking delegate b:");
+            //b("Anh Tuan");
+            //Console.WriteLine("Invoking delegate c:");
+            //c("Hieu");
+            //Console.WriteLine("Invoking delegate d:");
+            //d("D");
+
+            var numbers = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 90,101};
+
+            foreach (var item in numbers)
+            {
+                if (IsEven(item))
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            //var evenNumbers1 = numbers.Where(x => IsEven(x));
+            //var evenNumbers2 = numbers.Where(IsEven);
+            Console.WriteLine("Test LINQ");
+            var evenNumbers = numbers.Where(x => x % 2 ==0);
+            foreach (var i in evenNumbers)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("Test LINQ2");
+            var myNumbers = numbers.Where(e => (e % 2 == 0 && e%3 !=0));
+            foreach (var i in myNumbers)
+            {
+                Console.WriteLine(i);
+            }
 
             Console.ReadLine();
+        }
+
+       static bool IsEven(int number)
+        {
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
