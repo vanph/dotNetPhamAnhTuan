@@ -11,6 +11,8 @@ namespace DataAccess
     {
         public int Id { get; set; }
 
+        public int OrgnizationId { get; set; }
+
         [Required]
         [StringLength(20)]
         public string FirstName { get; set; }
@@ -21,5 +23,7 @@ namespace DataAccess
 
         [StringLength(250)]
         public string Address { get; set; }
+
+        public virtual Organization Organization { get; set; }
     }
 }

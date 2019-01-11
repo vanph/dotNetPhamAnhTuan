@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using DataAccess;
+using EmployeeManagerApplication.Models;
 
 
 namespace EmployeeManagerApplication
@@ -48,7 +49,15 @@ namespace EmployeeManagerApplication
         {
             var dbContext = new EmployeeEntities();
 
-            var employees = dbContext.Employees.ToList();
+            var employees = dbContext.Employees.Select(x =>
+                new EmployeeInformation
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Address = x.Address,
+                    OrganizationName = x.Organization.Description
+                }).ToList();
 
             grdEmployee.DataSource = employees;
         }
