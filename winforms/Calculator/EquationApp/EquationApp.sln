@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleEquotation", "SimpleEquatation\SimpleEquotation.csproj", "{46E0D693-421E-4F9B-B1A5-3FECE8025201}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorApp", "CalculatorApp\CalculatorApp.csproj", "{1D967B0F-7F53-42E4-8327-4FB4CA82F65D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{46E0D693-421E-4F9B-B1A5-3FECE8025201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E0D693-421E-4F9B-B1A5-3FECE8025201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E0D693-421E-4F9B-B1A5-3FECE8025201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D967B0F-7F53-42E4-8327-4FB4CA82F65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D967B0F-7F53-42E4-8327-4FB4CA82F65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D967B0F-7F53-42E4-8327-4FB4CA82F65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D967B0F-7F53-42E4-8327-4FB4CA82F65D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
