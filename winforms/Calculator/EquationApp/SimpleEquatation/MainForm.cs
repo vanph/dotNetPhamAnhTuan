@@ -52,6 +52,9 @@ namespace SimpleEquotation
             labelResult.Text = $"Result: {result}";
         }
 
+        private void MainForm_Load(object sender, System.EventArgs e)
+        {
 
+        }
     }
 }
